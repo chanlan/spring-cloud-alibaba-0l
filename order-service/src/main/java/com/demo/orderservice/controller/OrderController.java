@@ -1,7 +1,7 @@
 package com.demo.orderservice.controller;
 
-import com.demo.orderservice.dto.Stock;
-import com.demo.orderservice.feign.WarehouseServiceFeignClient;
+import com.demo.servieapi.dto.Stock;
+import com.demo.servieapi.feign.WarehouseServiceFeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

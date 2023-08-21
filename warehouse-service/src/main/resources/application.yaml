@@ -7,5 +7,25 @@ spring:
         server-addr: 192.168.80.3:8848
         username: nacos
         password: nacos
+#负载均衡策略配置
+warehouse-service:
+  ribbon:
+    NFLoadBalancerRuleClassName:com.netflix.loadbalancer.RandomRule
+#开启gzip数据压缩
+feign:
+  #启用OkHttp
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 1024  #1K大小开启压缩
+      #开启响应数据压缩功能
+      response:
+        enabled: true
+#替换默认通信组件，默认openFeign使用JDK自带的URLConnection对象创建HTTP请求
+#可以使用Apache HttpClient或者OKHttp代替
+
 server:
   port: 80
