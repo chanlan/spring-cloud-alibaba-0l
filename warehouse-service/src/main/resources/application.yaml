@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: warehouse-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.80.3:8848
+        username: nacos
+        password: nacos
+server:
+  port: 80
